@@ -9,6 +9,7 @@ public class script_controlador_jogo : MonoBehaviour
     void Start()
     {
         pausado = false;
+        SceneManager.UnloadSceneAsync(3);
     }
 
     // Update is called once per frame
