@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class script_pc : MonoBehaviour
 {
@@ -55,5 +56,10 @@ public class script_pc : MonoBehaviour
             som_tiro.Play();
             Instantiate(tiro, pos, Quaternion.identity);
         }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
     }
 }
